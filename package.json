@@ -1,0 +1,30 @@
+{
+  "name": "@websh/bios",
+  "version": "0.1.0",
+  "description": "Base component types and utils for WebShell",
+  "module": "bios.mjs",
+  "scripts": {
+    "test": "node --experimental-modules test/index.mjs",
+    "test-nodemon": "nodemon --experimental-modules test/index.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/websh-org/bios.git"
+  },
+  "keywords": [
+    "websh",
+    "webshell",
+    "bios",
+    "events",
+    "props"
+  ],
+  "author": "Zoran Obradović, Ljudmila.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/websh-org/bios/issues"
+  },
+  "homepage": "https://github.com/websh-org/bios#readme",
+  "dependencies": {
+    "@websh/factory": "file:../00_factory"
+  }
+}
