@@ -1,39 +1,11 @@
 import { register, create } from "@websh/factory";
 import { assert, copy } from "./utils.mjs";
 
-register("props-propagate", {
-  extends: "props events",
-  build: {
-    props: {
-      build(def, dd) {
-        for (const prop in def) {
-          if (def[prop].propagate) {
-            const currentSetter = dd.props[prop].set;
-            dd.props[prop].set = value => {
-              currentSetter(value);
-              setTimeout(() => {
-                this.trigger("prop-change", {
-                  path: [prop],
-                  value: this.props[prop]
-                });
-              }, 0);
-            };
-          }
-        }
-      }
-    }
-  }
-});
-
 const CHILD = Symbol();
 const CHILDREN = Symbol();
 
-register("props-propagate-parent", {
+register("children", {
   extends: "props-propagate",
-  construct() {
-    CHILD.set(this,{});
-    CHILDREN.set(this,{});
-  },
   build: {
     child(def) {
       Object.assign(CHILD.get(this), copy(def));
