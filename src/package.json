@@ -3,12 +3,6 @@
   "version": "0.1.0",
   "description": "Base component types and utils for WebShell",
   "module": "bios.mjs",
-  "scripts": {
-    "test": "node --experimental-modules tests/index.mjs",
-    "testmon": "nodemon --experimental-modules tests/index.mjs",
-    "testweb": "(cd tests; parcel index.html --open)",
-    "build": "bash scripts/build || true"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/websh-org/bios.git"
@@ -26,5 +20,7 @@
     "url": "https://github.com/websh-org/bios/issues"
   },
   "homepage": "https://github.com/websh-org/bios#readme",
-  "dependencies": {}
+  "dependencies": {
+    "@websh/factory": "^0.1.2"
+  }
 }

@@ -1,5 +1,4 @@
-import { Bios, test } from "../src/bios.mjs";
+import { Bios, test } from '../src/bios.mjs';
 
-const {register,create} = Bios();
-export {register,create, test}
-
+const { register, create } = Bios();
+export { register, create, test };

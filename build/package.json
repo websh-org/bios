@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/websh-org/bios#readme",
   "dependencies": {
-    "@websh/factory": "^0.1.0"
+    "@websh/factory": "^0.1.2"
   }
 }
