@@ -1,4 +1,4 @@
-import { register, create, test } from "../bios.mjs";
+import { register, create, test } from "./setup.mjs";
 test("Events");
 
 register('con',{
